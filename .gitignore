@@ -26,6 +26,10 @@
 **/.idea/**/contentModel.xml
 **/.idea/**/modules.xml
 
+# Rider
+# User specific files at the root of the project
+.idea/
+
 *.suo
 *.user
 .vs/
