@@ -2,13 +2,13 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selection.API", "src\Selection.API\Selection.API.csproj", "{B2A2E42C-B3A1-462B-9EE8-8435F0BC4AD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selection.Domain", "Selection.Domain\Selection.Domain.csproj", "{1CFD8A33-77CD-468B-90BF-6E315732FC88}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selection.Domain", "src\Selection.Domain\Selection.Domain.csproj", "{1CFD8A33-77CD-468B-90BF-6E315732FC88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selection.Infrastructure", "Selection.Infrastructure\Selection.Infrastructure.csproj", "{E7A959BC-B648-4DA6-8AD9-385DB640EE5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selection.Infrastructure", "src\Selection.Infrastructure\Selection.Infrastructure.csproj", "{E7A959BC-B648-4DA6-8AD9-385DB640EE5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickr.AppHost.AppHost", "Pickr.AppHost\Pickr.AppHost.AppHost\Pickr.AppHost.AppHost.csproj", "{3729CE70-7E4C-48B4-8FE6-C1C53CD7B66D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickr.AppHost", "src\Pickr.AppHost\Pickr.AppHost.csproj", "{3729CE70-7E4C-48B4-8FE6-C1C53CD7B66D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickr.ServiceDefaults", "Pickr.AppHost\Pickr.ServiceDefaults\Pickr.ServiceDefaults.csproj", "{1B18D2B0-D924-45D0-A80F-A3A02E917E2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickr.ServiceDefaults", "src\Pickr.ServiceDefaults\Pickr.ServiceDefaults.csproj", "{1B18D2B0-D924-45D0-A80F-A3A02E917E2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

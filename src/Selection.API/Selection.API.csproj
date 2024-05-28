@@ -13,7 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Pickr.AppHost\Pickr.ServiceDefaults\Pickr.ServiceDefaults.csproj" />
+      <ProjectReference Include="..\Pickr.ServiceDefaults\Pickr.ServiceDefaults.csproj" />
     </ItemGroup>
 
 </Project>
