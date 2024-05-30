@@ -1,12 +1,18 @@
-using Projects;
-
 var builder = DistributedApplication.CreateBuilder(args);
 
 // Infrastructure
 var rabbitMq = builder.AddRabbitMQ("eventbus");
+var postgres = builder.AddPostgres("postgres");
+
+// Databases
+var catalogDb = postgres.AddDatabase("catalogdb");
 
 // Services
-builder.AddProject<Selection_API>("selection-api")
+builder.AddProject<Projects.Catalog_API>("catalog-api")
+    .WithReference(rabbitMq)
+    .WithReference(catalogDb);
+
+builder.AddProject<Projects.Selection_API>("selection-api")
     .WithReference(rabbitMq);
 
 builder.Build().Run();

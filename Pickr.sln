@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickr.AppHost", "src\Pickr.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickr.ServiceDefaults", "src\Pickr.ServiceDefaults\Pickr.ServiceDefaults.csproj", "{1B18D2B0-D924-45D0-A80F-A3A02E917E2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "src\Catalog.API\Catalog.API.csproj", "{FD8EF9B5-F643-4D51-AC77-BCB89554BF79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{1B18D2B0-D924-45D0-A80F-A3A02E917E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B18D2B0-D924-45D0-A80F-A3A02E917E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B18D2B0-D924-45D0-A80F-A3A02E917E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD8EF9B5-F643-4D51-AC77-BCB89554BF79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD8EF9B5-F643-4D51-AC77-BCB89554BF79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD8EF9B5-F643-4D51-AC77-BCB89554BF79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD8EF9B5-F643-4D51-AC77-BCB89554BF79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
