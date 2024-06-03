@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Selections.API.Application.Queries;
+using Selections.Domain.Aggregates.SelectionAggregate;
+using Selections.Domain.SeedWork;
 using Selections.Infrastructure;
+using Selections.Infrastructure.Repositories;
 
 namespace Selections.API;
 
@@ -15,5 +19,14 @@ public static class ApiModule
             options.UseNpgsql(builder.Configuration.GetConnectionString("selectionsdb"));
         });
         builder.EnrichNpgsqlDbContext<SelectionsContext>();
+        
+        // Configure MediatR
+        builder.Services.AddMediatR(cfg =>
+        {
+            cfg.RegisterServicesFromAssemblyContaining(typeof(Program));
+        });
+
+        builder.Services.AddScoped<ISelectionQueries, SelectionQueries>();
+        builder.Services.AddScoped<IRepository<Selection>, SelectionRepository>();
     }
 }
