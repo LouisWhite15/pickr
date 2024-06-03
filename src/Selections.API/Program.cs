@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Pickr.AppHost.ServiceDefaults;
 using Selections.API;
+using Selections.API.Apis;
 using Selections.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,6 +28,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapDefaultEndpoints();
+
+app.MapSelectionsApi();
 
 // Migrate the database on app startup
 // This will need to be cleaned up later

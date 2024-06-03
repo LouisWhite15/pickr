@@ -31,4 +31,11 @@ public class SelectionRepository(SelectionsContext context) : ISelectionReposito
 
         return selection;
     }
+
+    public async Task<List<Selection>> GetAsync()
+    {
+        return await context.Selections
+            .Include(selection => selection.Items)
+            .ToListAsync();
+    }
 }

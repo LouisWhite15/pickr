@@ -27,6 +27,6 @@ public static class ApiModule
         });
 
         builder.Services.AddScoped<ISelectionQueries, SelectionQueries>();
-        builder.Services.AddScoped<IRepository<Selection>, SelectionRepository>();
+        builder.Services.AddScoped<ISelectionRepository, SelectionRepository>();
     }
 }

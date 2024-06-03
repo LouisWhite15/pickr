@@ -11,4 +11,5 @@ public enum SelectionStatus
     AwaitingValidation = 2,
     StockConfirmed = 3,
     Cancelled = 4,
+    Completed = 5
 }
