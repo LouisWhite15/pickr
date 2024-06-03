@@ -3,11 +3,13 @@ using Selections.Domain.SeedWork;
 
 namespace Selections.Domain.Aggregates.SelectionAggregate;
 
-public class Selection : Entity, IAggregateRoot
+public sealed class Selection : Entity, IAggregateRoot
 {
-    public string Name { get; set; }
-    public List<SelectionItem> Items { get; set; } = [];
-    public Guid UserId { get; set; }
+    public string Name { get; private set; }
+    public List<SelectionItem> Items { get; private set; } = [];
+    public Guid UserId { get; private set; }
+    
+    public SelectionStatus Status { get; private set; }
 
     public Selection()
     {
@@ -18,6 +20,7 @@ public class Selection : Entity, IAggregateRoot
         Id = Guid.NewGuid();
         Items = items;
         UserId = userId;
+        Status = SelectionStatus.Started;
         
         AddDomainEvent(new SelectionStartedDomainEvent(this));
     }

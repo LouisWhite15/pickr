@@ -6,6 +6,7 @@ var postgres = builder.AddPostgres("postgres");
 
 // Databases
 var catalogDb = postgres.AddDatabase("catalogdb");
+var selectionsDb = postgres.AddDatabase("selectionsdb");
 
 // Services
 builder.AddProject<Projects.Catalog_API>("catalog-api")
@@ -13,6 +14,7 @@ builder.AddProject<Projects.Catalog_API>("catalog-api")
     .WithReference(catalogDb);
 
 builder.AddProject<Projects.Selections_API>("selections-api")
-    .WithReference(rabbitMq);
+    .WithReference(rabbitMq)
+    .WithReference(selectionsDb);
 
 builder.Build().Run();
