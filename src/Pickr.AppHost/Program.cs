@@ -12,7 +12,7 @@ builder.AddProject<Projects.Catalog_API>("catalog-api")
     .WithReference(rabbitMq)
     .WithReference(catalogDb);
 
-builder.AddProject<Projects.Selection_API>("selection-api")
+builder.AddProject<Projects.Selections_API>("selections-api")
     .WithReference(rabbitMq);
 
 builder.Build().Run();

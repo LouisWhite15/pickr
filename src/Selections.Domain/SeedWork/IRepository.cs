@@ -1,4 +1,4 @@
-namespace Selection.Domain.SeedWork;
+namespace Selections.Domain.SeedWork;
 
 public interface IRepository<T> where T : IAggregateRoot
 {

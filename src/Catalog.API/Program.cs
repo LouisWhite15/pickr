@@ -2,6 +2,7 @@ using Catalog.API;
 using Catalog.API.Apis;
 using Catalog.API.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using Pickr.AppHost.ServiceDefaults;
 
 var builder = WebApplication.CreateBuilder(args);
 
