@@ -9,12 +9,20 @@ var catalogDb = postgres.AddDatabase("catalogdb");
 var selectionsDb = postgres.AddDatabase("selectionsdb");
 
 // Services
-builder.AddProject<Projects.Catalog_API>("catalog-api")
+var catalogApi = builder.AddProject<Projects.Catalog_API>("catalog-api")
     .WithReference(rabbitMq)
     .WithReference(catalogDb);
 
-builder.AddProject<Projects.Selections_API>("selections-api")
+var selectionsApi = builder.AddProject<Projects.Selections_API>("selections-api")
     .WithReference(rabbitMq)
     .WithReference(selectionsDb);
+
+builder.AddNpmApp("react", "../web-app")
+    .WithReference(catalogApi)
+    .WithReference(selectionsApi)
+    .WithEnvironment("BROWSER", "none") // Disable opening browser on npm start
+    .WithHttpEndpoint(env: "PORT")
+    .WithExternalHttpEndpoints()
+    .PublishAsDockerFile();
 
 builder.Build().Run();
